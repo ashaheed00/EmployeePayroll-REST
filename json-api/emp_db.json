@@ -1,0 +1,58 @@
+{
+  "employee_payroll": [
+    {
+      "id": 1,
+      "company_id": 0,
+      "name": "Vishal",
+      "gender": "M",
+      "salary": 1500000.0,
+      "start_date": "2018-02-06",
+      "active": 1
+    },
+    {
+      "id": 2,
+      "company_id": 0,
+      "name": "John",
+      "gender": "M",
+      "salary": 2500000.0,
+      "start_date": "2016-10-12",
+      "active": 1
+    },
+    {
+      "id": 3,
+      "company_id": 0,
+      "name": "Asifa",
+      "gender": "F",
+      "salary": 1800000.0,
+      "start_date": "2019-10-10",
+      "active": 1
+    },
+    {
+      "id": 5,
+      "company_id": 0,
+      "name": "Terisa",
+      "gender": "F",
+      "salary": 3000000.0,
+      "start_date": "2019-11-13",
+      "active": 0
+    },
+    {
+      "id": 6,
+      "company_id": 0,
+      "name": "Terisa",
+      "gender": "F",
+      "salary": 3000000.0,
+      "start_date": "2019-11-13",
+      "active": 1
+    },
+    {
+      "id": 30,
+      "company_id": 501,
+      "name": "Mark",
+      "gender": "M",
+      "salary": 2000000.0,
+      "start_date": "2016-02-01",
+      "active": 1
+    }
+  ]
+}
