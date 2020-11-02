@@ -95,4 +95,22 @@ public class EmployeePayrollRESTAssuredTest {
 		Response response = updateEmployeeSalary(employeePayrollData);
 		assertEquals(200, response.statusCode());
 	}
+
+	private Response deleteEmployee(EmployeePayrollData employeePayrollData) {
+		String empJson = new Gson().toJson(employeePayrollData);
+		RequestSpecification requestSpecification = RestAssured.given();
+		requestSpecification.header("Content-Type", "application/json");
+		requestSpecification.body(empJson);
+		return requestSpecification.delete("/employee_payroll/" + employeePayrollData.getId());
+	}
+
+	@Test
+	public void givenEmployeeId_WhenDelelted_ShouldMatchStatusCodeAndCount() {
+		EmployeePayrollService employeePayrollService = new EmployeePayrollService(getEmployeeList());
+		employeePayrollService.removeEmployee("Mark");
+		EmployeePayrollData employeePayrollData = employeePayrollService.getEmployeePayrollData("Mark");
+		Response response = deleteEmployee(employeePayrollData);
+		assertEquals(200, response.statusCode());
+	}
+
 }
