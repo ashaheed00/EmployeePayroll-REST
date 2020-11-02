@@ -14,6 +14,7 @@ import io.restassured.RestAssured;
 import io.restassured.response.Response;
 
 public class EmployeePayrollRESTAssuredTest {
+	
 	@Before
 	public void setup() {
 		RestAssured.baseURI = "http://localhost";
