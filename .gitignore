@@ -1,0 +1,13 @@
+*.log
+logs/
+.settings/
+target/
+.project
+bin/
+.classpath
+.gradle/
+gradle/
+gradlew
+gradlew.bat
+settings.gradle
+.gitattributes
