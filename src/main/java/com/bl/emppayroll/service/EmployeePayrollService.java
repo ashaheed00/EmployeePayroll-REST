@@ -134,9 +134,21 @@ public class EmployeePayrollService {
 			e.printStackTrace();
 		}
 	}
+	
+	public void removeEmployee(String name) {
+		try {
+			employeePayrollDBService.removeEmployeeFromDB(name);
+		} catch (EmployeePayrollException e) {
+			e.printStackTrace();
+		}
+	}
 
-	private EmployeePayrollData getEmployeePayrollData(String name) {
+	public EmployeePayrollData getEmployeePayrollData(String name) {
 		return employeePayrollList.stream().filter(e -> e.getName().equals(name)).findFirst().orElse(null);
+	}
+
+	public EmployeePayrollData getEmployeePayrollData(int id) {
+		return employeePayrollList.stream().filter(e -> e.getId() == id).findFirst().orElse(null);
 	}
 
 	public void addEmployeePayrollData(List<EmployeePayrollData> employeePayrollDataList)

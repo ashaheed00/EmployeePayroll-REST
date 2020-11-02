@@ -246,4 +246,14 @@ public class EmployeePayrollDBService {
 			throw new EmployeePayrollException("Wrong SQL or field given", ExceptionType.WRONG_SQL);
 		}
 	}
+	
+	public void removeEmployeeFromDB(String name) throws EmployeePayrollException {
+		String sql = String.format("UPDATE employee_payroll SET active = false WHERE name = '%s'", name);
+		try (Connection connection = getConnection()) {
+			PreparedStatement preparedStatement = connection.prepareStatement(sql);
+			preparedStatement.executeUpdate();
+		} catch (SQLException e) {
+			throw new EmployeePayrollException("Wrong SQL or field given", ExceptionType.WRONG_SQL);
+		}
+	}
 }
